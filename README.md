@@ -164,8 +164,8 @@ every need!
 
 Called once on initial render:
 
-| Method            | current props and state | prevProps | prevState | nextProps |  nextState | Can call `this.setState` | Called when?               | Used for                                                                                    |
-|:-------------------------:|:---------:|:---------:|:----------------------:|:-------------------------------------------------------:|:--------------------------------------------------------------------------------:|
+| Method            | current props and state | prevProps | prevState | nextProps |  nextState | Can call `this.setState` | Called when?               | Used for |                                                                                   
+|:-------------------------:|:---------:|:---------:|:----------------------:|:-------------------------------------------------------:|:--------------------------------------------------------------------------------:|:---------:|:---------:|:----------------------:|
 | `constructor` |     no    |     no    |     no    |     no    |     no    |     no    | once, just before `static getDerivedStateFromProps()` is called for the first time | Setting initial state                                             |
 | `static getDerivedStateFromProps()` |     yes    |     no    |     no    |     no    |     no    |     yes    | right before the initial render and **all** re-renders | Not used often |
 | `render()`           |     yes   |     no    |     no    |     no    |     no    |     no    | every time React updates and commits to the DOM | Writing JSX for components |
@@ -176,7 +176,7 @@ Called once on initial render:
 Not called on initial render, but always called whenever a subsequent re-render is triggered:
 
 | Method            | current props and state | prevProps | prevState | nextProps |  nextState | Can call `this.setState` | Called when?               | Used for                                                                                    |
-|:-------------------------:|:---------:|:---------:|:----------------------:|:-------------------------------------------------------:|:--------------------------------------------------------------------------------:|
+|:-------------------------:|:---------:|:---------:|:----------------------:|:-------------------------------------------------------:|:--------------------------------------------------------------------------------:|:---------:|:---------:|:----------------------:|
 | `static getDerivedStateFromProps()` |    yes    |     no    |     no    |     no    |     no    |     yes     |     before every render  |   Not used often |
 |   `shouldComponentUpdate`   |    yes    |    no    |    no    |    yes    |    yes   |    yes    | before every re-render (not initially) | can be used to stop unnecessary re-renders for performance optimization |
 |     `getSnapshotBeforeUpdate`    |    yes   |    yes   |    yes   |    no   |    no   |    yes   | just before React updates and commits new content to the DOM | used rarely; can capture data that may be changing rapidly |
@@ -192,7 +192,7 @@ into the method by React.
 Called only once, just before the component is removed from the DOM:
 
 | Method            | current props and state | prevProps | prevState | nextProps |  nextState | Can call `this.setState` | Called when?               | Used for                                                                                    |
-|:--------------------:|:---------:|:---------:|:----------------------:|:---------------------------------------------------:|:-------------------------------------------------------:|
+|:--------------------:|:---------:|:---------:|:----------------------:|:---------------------------------------------------:|:-------------------------------------------------------:|:---------:|:---------:|:----------------------:|
 | `componentWillUnmount` | yes | no | no | no | no | n/a | once, just before component is removed from the DOM | destroying any side effects set up in componentDidMount |
 
 
