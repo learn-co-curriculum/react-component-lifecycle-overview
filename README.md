@@ -119,7 +119,7 @@ actually alter the component that's being shown to the user, there is no point
 After the first two hooks, `render` is called, returning the JSX for React.
 React uses this JSX to figure out what to display on the page.
 
-_Just_ before updating, `getSnapshotBeforeUpdate` is invoked. The ¥
+_Just_ before updating, `getSnapshotBeforeUpdate` is invoked. The
 `getSnapshotBeforeUpdate` method returns a 'snapshot' that can be used in the
 final update lifecycle method, `componentDidUpdate`. This snapshot allows us to
 capture things like scroll position. This sort of value can possibly change in
