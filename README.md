@@ -77,8 +77,8 @@ After the `constructor` is called, `static getDerivedStateFromProps` will get
 called just _before_ `render`. This method gives us access to any props and
 state, and can modify and return state before a component is rendered. It is
 uncommon that we use this hook - even [the React documentation][derived]
-mentions that it exists for rare use cases. This method is called every time a
-component renders. The initial render and all subsequent re-renders of content.
+mentions that it exists for rare use cases. This method is called every time a component 
+renders: the initial render and all subsequent re-renders of content."
 
 Since the introduction of React 16, this is the _only_ hook that fires before
 render() during mounting and updating. Any code in this lifecycle method is extra
