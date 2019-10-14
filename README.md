@@ -76,8 +76,8 @@ renders its initial JSX onto the page. At the mounting stage, there are two
 After the `constructor` is called, `static getDerivedStateFromProps` will get
 called just _before_ `render`. This method gives us access to any props and
 state, and can modify and return state before a component is rendered. This
-method is called every time a component renders, including the initial render
-and all subsequent re-renders of content. It is uncommon that we use this hook -
+method gets called every time a component renders, including the initial render
+and all subsequent re-renders of content. It is uncommon that we use this hook, though -
 even [the React documentation][derived] mentions that it exists for rare use
 cases. We want to prioritize rendering - adding logic that runs before every
 render can have an impact on a component's performance. It is more common that
@@ -92,8 +92,8 @@ the state of a child, you can often avoid this by just putting the state _in the
 parent component_ and handle the comparison logic in the parent.
 
 Since the introduction of React 16, `static getDerivedStateFromProps` is the
-_only_ hook that fires before render() during mounting and updating. Any code in
-this lifecycle method is extra code to run _before_ JSX is rendered to the DOM.
+_only_ hook that fires before render() during mounting. Any code in this
+lifecycle method is extra code to run _before_ JSX is rendered to the DOM.
 
 After the `constructor` and `static getDerivedStateFromProps`, `render` is
 invoked, most often returning JSX so that React can insert it into the DOM.
