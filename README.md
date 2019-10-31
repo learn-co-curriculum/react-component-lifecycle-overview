@@ -55,7 +55,7 @@ component responds to change. The optional methods will be called if you include
 definitions for them in a component. Otherwise, React will follow its default
 behavior.
 
-![Diagram](lifecycles.png)
+![Diagram](https://i1.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png)
 
 ## Pre-mounting
 
