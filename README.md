@@ -186,7 +186,7 @@ Called once on initial render:
 
 #### Updating lifecycle methods
 
-Not called on initial render, but always called whenever a subsequent re-render is triggered:
+Not called on initial render (except for `static getDerivedStateFromProps()`, as noted in the table above), but always called whenever a subsequent re-render is triggered:
 
 | Method            | current props and state | prevProps | prevState | nextProps |  nextState | Can call `this.setState` | Called when?               | Used for                                                                                    |
 |:-------------------------:|:---------:|:---------:|:----------------------:|:-------------------------------------------------------:|:--------------------------------------------------------------------------------:|:---------:|:---------:|:----------------------:|
